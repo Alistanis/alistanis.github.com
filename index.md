@@ -18,11 +18,3 @@ Complete code for the project available at: [Github](https://github.com/Alistani
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
-
-
-`_config.yml`
-
-## Sample of code block:
-
-    $ rm -rf _posts/core-samples
