@@ -5,7 +5,7 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-This site was born to supplement the Ruby Design Patterns project I'm building: [Ruby Design Patterns](http://alistanis.github.io/DesignPatterns/).
+This site was born to supplement the project I'm building: [Ruby Design Patterns](http://alistanis.github.io/DesignPatterns/).
 
 In time I hope it to become a valuable resource for Design Patterns, Ruby, and C/Ruby C Extensions.
 
