@@ -203,7 +203,7 @@ end
 execute(function)
     {% endhighlight %}
 
-Because we implemented our concrete class as a child class of the Command class, we call execute as super instead.
+Because we implemented our concrete class as a child class of the Command class, we can call super inside of our execute function.
 In Ruby, if you write a method in a child class that has the same name as a method in the superclass, you can call the superclass method inside the child class simply
 by calling super:
 
@@ -235,7 +235,3 @@ Sources:
 ## Up next:
 
 Next time we'll cover a few more commands, a command list, and then we'll write a full suite of Rspec tests to make sure our commands do what we expect them to!
-
-
-
-
