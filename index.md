@@ -11,6 +11,10 @@ In time I hope it to become a valuable resource for Design Patterns, Ruby, and C
 
 Complete code for the project available at: [Github](https://github.com/Alistanis/DesignPatterns)
 
+## Tutorials
+
+[Check out the categories page for an up to date list of tutorials by category.](/categories.html)
+
 ## Posts
 
 <ul class="posts">
