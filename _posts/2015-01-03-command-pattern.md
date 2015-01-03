@@ -219,6 +219,8 @@ class ChildCommand < Command
 end
     {% endhighlight %}
 
+If we don't call super, the superclass function will be overridden by whatever we define in the child class.
+
 ## Conclusion
 Now we've seen how the basic command pattern works by defining an abstract interface for executing commands and for undoing them.
 
