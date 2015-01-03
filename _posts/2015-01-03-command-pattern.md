@@ -23,7 +23,7 @@ MacOSX comes with a system Ruby which, on Yosemite, is 2.0, but prior to Yosemit
 versions of Ruby, but this code should work just fine on 2.0 either way.
 At the time of this writing my dev environment is as follows:
 
-* MacOSX 10.12
+* MacOSX 10.10.1
 * RVM 1.26.7
 * Ruby 2.1.5
 * Homebrew 0.9.5
