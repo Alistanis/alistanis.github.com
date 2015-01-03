@@ -13,7 +13,9 @@ Complete code for the project available at: [Github](https://github.com/Alistani
 
 ## Tutorials
 
-[Check out the categories page for an up to date list of tutorials by category,](/categories.html) [or check out the tags page for a list of tutorials by Pattern.](/tags.html)
+*By Category* - [Check out the categories page for an up to date list of tutorials by category](/categories.html)
+
+*By Pattern* - [or check out the tags page for a list of tutorials by Pattern.](/tags.html)
 
 ## Posts
 
