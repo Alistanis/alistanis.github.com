@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "posts&#91;0&#93;; (first post)"
-category: "welcome"
-tags: "welcome"
+category: "Welcome"
+tags: "Welcome"
 
 ---
 {% include JB/setup %}
