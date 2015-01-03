@@ -19,6 +19,8 @@ API documentation generated from that code is here: [Command Pattern API docs](h
 ## Getting started
 
 I'll begin by assuming you have a development environment set up for Ruby.
+MacOSX comes with a system Ruby which, on Yosemite, is 2.0, but prior to Yosemite was 1.8.7. I recommend installing and using [RVM](https://rvm.io/) to manage different
+versions of Ruby, but this code should work just fine on 2.0 either way.
 At the time of this writing my dev environment is as follows:
 
 * MacOSX 10.12
@@ -230,7 +232,7 @@ Sources:
 
 ## Up next:
 
-Next time we'll cover a few more commands, a command list, and we'll write a full suite of Rspec tests to make sure our commands do what we expect them to!
+Next time we'll cover a few more commands, a command list, and then we'll write a full suite of Rspec tests to make sure our commands do what we expect them to!
 
 
 
