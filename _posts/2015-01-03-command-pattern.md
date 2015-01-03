@@ -7,7 +7,7 @@ tags: ["Intro", "Command Pattern"]
 ---
 {% include JB/setup %}
 
-#### The command pattern
+*The command pattern*
 is one of many Design Patterns first introduced by the [Gang of Four](http://en.wikipedia.org/wiki/Design_Patterns).
 The book Design Patterns: Elements of Reusable Object-Oriented Software is one of the few de facto books about software
 that has become required reading for many reasons. The command pattern is one of the first covered in the book, I believe it to be one of the most
