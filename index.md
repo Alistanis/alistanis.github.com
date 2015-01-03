@@ -7,13 +7,13 @@ tagline: Supporting tagline
 
 This site was born to supplement the project I'm building: [Ruby Design Patterns](http://alistanis.github.io/DesignPatterns/).
 
-In time I hope it to become a valuable resource for Design Patterns, Ruby, and C/Ruby C Extensions.
+In time I hope it to become a valuable resource for Design Patterns, Ruby, Ruby C Extensions, and much more.
 
 Complete code for the project available at: [Github](https://github.com/Alistanis/DesignPatterns)
 
 ## Tutorials
 
-[Check out the categories page for an up to date list of tutorials by category.](/categories.html)
+[Check out the categories page for an up to date list of tutorials by category,](/categories.html) [or check out the tags page for a list of tutorials by Pattern.](/tags.html)
 
 ## Posts
 
