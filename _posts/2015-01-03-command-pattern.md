@@ -237,7 +237,7 @@ end
 
 If we don't call super, the superclass function will be overridden by whatever we define in the child class - example below.
 
-    [%highlight ruby %}
+    {% highlight ruby %}
 class A
   def initialize
     puts 'Hello'
