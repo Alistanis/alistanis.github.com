@@ -217,6 +217,7 @@ execute(function)
     {% endhighlight %}
 
 For a more in depth look at Procs, blocks, and Lamdas in Ruby, this is the best writeup I've seen on it:
+
 * [http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/](http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/)
 
 Because we implemented our concrete class as a child class of the Command class, we can call super inside of our execute function.
