@@ -37,9 +37,12 @@ running the samples and I'll do my best to assist you.
 The command pattern is defined as "a behavioral design pattern in which an object is used to represent and encapsulate all
 the information needed to call a method at a later time." Generally a command class will contain at least one method - execute, though often it will contain others as well,
 the most popular being undo. Undo is an example of the Memento pattern and has a lot of great uses. Could you imagine not being able to undo an accidental deletion
-of an entire page of text? Chances are good the underlying code uses some variation of Command and Memento.
+of an entire page of text? Chances are good the underlying code in your favorite text editor uses some variation of Command and Memento.
 
-Today we're going to build a Base Command Class and then we'll build a Create File class that will serve as our first concrete command.
+Today we're going to build a Base Command Class and then we'll build a Create File class that will serve as our first concrete command. I'll also cover a few points
+on inheritance and [Proc Objects](http://ruby-doc.org/core-2.2.0/Proc.html) and [blocks](http://rubylearning.com/satishtalim/ruby_blocks.html),
+so if you're new to Ruby you should still be able to follow along. If you have trouble with any of the concepts here,
+feel free to leave a comment below and I'll try to clear it up.
 
 Let's start defining our base class and its first few methods and fields - note - more detailed comments are contained in the actual code and the API docs.
 
@@ -110,9 +113,15 @@ end
     {% endhighlight %}
 
 We've defined a base class that will act as an interface for the other commands we're going to implement. It has two fields, a description and a status,
-both of which are initialized in the initialize method. It has two other methods: execute and undo. Both of those methods take an argument called function that will be a Proc Object defined in our child classes.
+both of which are initialized in the initialize method. It has two other methods: execute and undo. Both of those methods take an argument called 'function'
+that will be a [Proc Object](http://ruby-doc.org/core-2.2.0/Proc.html) defined in our child classes.
 
-Now let's look at implementing a concrete Command in a child class:
+Note: It is not required to implement additional functionality into the parent class (Command) to follow the Command Pattern as it's traditionally written.
+All of our functions could be written in child classes and we could use the Command class as a true abstract class,
+but I like my commands to have a little bit more flexibility - for instance, think about how easy
+it would be to add logging functionality to every command simply by changing a few things in the parent class.
+
+Now let's look at implementing a concrete Command in a child class, CreateFile. CreateFile will inherit from our Command class:
 
     {% highlight ruby %}
 
@@ -163,9 +172,13 @@ end
 
     {% endhighlight %}
 
-Note: The function could be passed in other ways as well
+As we can see above, we have implemented all of the same named functions in the superclass (Command) in the child class (CreateFile). In those functions we explicitly
+call the superclass function, which is designed to provide the same functionality to any Command we'd like to implement. In the execute and undo functions, we've created
+a Proc object that contains the instructions for writing some data to a file and undoing that write respectively.
 
-Parent class examples:
+Note: The function could be passed into the superclass other ways as well
+
+Parent class examples of alternate methods:
 
     {% highlight ruby %}
 
@@ -203,6 +216,9 @@ end
 execute(function)
     {% endhighlight %}
 
+For a more in depth look at Procs, blocks, and Lamdas in Ruby, this is the best writeup I've seen on it:
+* [http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/](http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/)
+
 Because we implemented our concrete class as a child class of the Command class, we can call super inside of our execute function.
 In Ruby, if you write a method in a child class that has the same name as a method in the superclass, you can call the superclass method inside the child class simply
 by calling super:
@@ -219,7 +235,29 @@ class ChildCommand < Command
 end
     {% endhighlight %}
 
-If we don't call super, the superclass function will be overridden by whatever we define in the child class.
+If we don't call super, the superclass function will be overridden by whatever we define in the child class - example below.
+
+    [%highlight ruby %}
+class A
+  def initialize
+    puts 'Hello'
+  end
+end
+
+class B < A
+  def initialize
+    puts 'Hi'
+  end
+end
+
+b = B.new
+=> Hi
+    {% endhighlight %}
+
+Above, class B inherits from class A, and we can see that when class B is instantiated, its output is 'Hi' intead of 'Hello' because the superclass(A) initialization
+function (constructor) has been overridden by the child class(B).
+
+
 
 ## Conclusion
 Now we've seen how the basic command pattern works by defining an abstract interface for executing commands and for undoing them.
