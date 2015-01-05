@@ -27,7 +27,7 @@ At the time of this writing my dev environment is as follows:
 * RVM 1.26.7
 * Ruby 2.1.5
 * Homebrew 0.9.5
-* Rubymine 7.0.2 (my personal preference)
+* Rubymine 7.0.2 (my personal preference, use whatever text editor you like)
 
 All of the code is tested and run for this environment, and it should work on Linux and Windows, but I haven't tested it. Please let me know if you have any trouble
 running the samples and I'll do my best to assist you.
